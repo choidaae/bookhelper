@@ -83,6 +83,12 @@
             border: 2px solid rgb(0, 136, 255);
         }
 
+        .savebtn>button {
+            background-color: white;
+            border: none;
+            color: white;
+        }
+
         .accordion-body>img {
             width: 70%;
         }
@@ -113,17 +119,24 @@
                     <button onclick="copyToClipboard('vscodeexe')">vscode다운</button>
                     <button onclick="copyToClipboard('html')">HTML's Tag 기초</button>
                     <button onclick="copyToClipboard('meta')">Meta Property</button>
-                    <hr>
-                    <button onclick="copyToClipboard('flex')">글자 정렬</button>
+                <hr>
                     <button onclick="copyToClipboard('webfont')">구글 웹폰트</button>
-                    <hr>
                     <button onclick="copyToClipboard('btbasic')">부트스트랩 기초</button>
                     <button onclick="copyToClipboard('btlink')">부트스트랩 5.0</button>
-
+                </div>
+                <hr>
+                <div class="combtn">
+                    <button onclick="copyToClipboard('btncss')">버튼 css</button>
+                    <button onclick="copyToClipboard('ptotext')">포토글자css</button>
+                </div>
+                <hr>
+                <div class="savebtn">
+                    <button onclick="copyToClipboard('bodyall')">body</button>
                 </div>
                 <hr>
 
-                <textarea id="vscodeexe" style="display: none;">http://update.code.visualstudio.com/1.73.1/win32-x64-user/stable</textarea>
+                <textarea id="vscodeexe"
+                    style="display: none;">http://update.code.visualstudio.com/1.73.1/win32-x64-user/stable</textarea>
 
                 <!--버튼 html tag 기초 내용 -->
                 <textarea id="html" style="display: none;">
@@ -180,14 +193,6 @@
                 </textarea>
 
 
-                <!-- 글자 정렬 내용 -->
-                <textarea id="flex" style="display: none;">
-            text-align: right; /* 텍스트를 오른쪽 정렬 */
-            padding-top: 5px;
-            padding-right: 15px;
-            box-sizing: border-box;
-                </textarea>
-
                 <!-- 버튼 구글웹폰트 -->
                 <textarea id="webfont" style="display: none;">
                     fonts.google.com/?subset=korean
@@ -222,7 +227,59 @@
                 <textarea id="btlink" style="display: none;">
                     getbootstrap.com/docs/5.0/components/carousel/
                 </textarea>
-           
+                <!-- 버튼CSS -->
+                <textarea id="btncss" style="display: none;">
+                    .profile>p>button {
+                        background-color: lightskyblue;
+                        box-shadow: 3px 3px 5px 0px rgb(172, 172, 172);
+            
+                        width: 380px;
+                        padding: 5px 3px 5px 3px;
+            
+                        border: none;
+                        border-radius: 8px;
+                        font-size: 17px;
+                        cursor: grab;
+                    }
+                </textarea>
+                <!-- 글자 정렬 내용 -->
+                <textarea id="ptotext" style="display: none;">
+                    text-align: right; /* 텍스트를 오른쪽 정렬 */
+                    padding-top: 5px;
+                    padding-right: 15px;
+                    box-sizing: border-box;
+                </textarea>
+
+                <textarea id="bodyall" style="display: none;">
+                    <div class="wrap">
+                        <h1 class="title">BIOGRAPHY</h1>
+                        <!--사진 박스 -->
+                         <div class="photo">이름(영문)</div>
+                
+                         <!--프로필 박스 -->
+                        <div class="profile">
+                            <p>
+                                <span style="color: gray; font-weight: bold;">생년월일</span>
+                                <br>0000년 0월 0일
+                            </p>
+                
+                            <p>
+                                <span style="color: gray; font-weight: bold;">대표업적</span>
+                                <br>내용 1
+                                <br>내용 2
+                            </p>
+                
+                            <p>
+                                <span style="color: gray; font-weight: bold;">연구자료</span>
+                                <br><button onclick="window.open('./article.html')">보고서 제목</button>
+                            </p>
+                            
+                            <p><span style="color: gray; font-weight: bold;">추천도서</span>
+                                <br><button onclick="window.open('링크삽입')">책 제목</button>
+                        </div>
+                        
+                    </div>
+                </textarea>
             </div>
         </div>
     </div>
@@ -301,4 +358,5 @@
         }
     </script>
 </body>
+
 </html>
